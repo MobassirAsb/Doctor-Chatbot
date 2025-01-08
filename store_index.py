@@ -8,8 +8,8 @@ import os
 
 load_dotenv()
 
-PINECONE_API_KEY=os.environ.get('pcsk_3hUTT4_8LuHsYDLS3KpVEMXW2Qx6T5yUAxbfX5Jow8zrhVTh8iFLJhrRKcMEEDHgf2J92o')
-os.environ["PINECONE_API_KEY"] = 'pcsk_3hUTT4_8LuHsYDLS3KpVEMXW2Qx6T5yUAxbfX5Jow8zrhVTh8iFLJhrRKcMEEDHgf2J92o'
+PINECONE_API_KEY=os.environ.get('')
+os.environ["PINECONE_API_KEY"] = ''
 
 
 extracted_data=load_pdf_file(data='Data/')
@@ -17,7 +17,7 @@ text_chunks=text_split(extracted_data)
 embeddings = download_hugging_face_embeddings()
 
 
-pc = Pinecone(api_key='pcsk_3hUTT4_8LuHsYDLS3KpVEMXW2Qx6T5yUAxbfX5Jow8zrhVTh8iFLJhrRKcMEEDHgf2J92o')
+pc = Pinecone(api_key='')
 
 index_name = "medicalbot"
 

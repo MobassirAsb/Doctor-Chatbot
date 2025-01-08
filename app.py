@@ -13,11 +13,12 @@ app = Flask(__name__)
 
 load_dotenv()
 
-PINECONE_API_KEY=os.environ.get('pcsk_3hUTT4_8LuHsYDLS3KpVEMXW2Qx6T5yUAxbfX5Jow8zrhVTh8iFLJhrRKcMEEDHgf2J92o')
-OPENAI_API_KEY=os.environ.get('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')
+PINECONE_API_KEY=os.environ.get('PINECONE_API_KEY')
+OPENAI_API_KEY=os.environ.get('OPENAI_API_KEY')
 
-os.environ["PINECONE_API_KEY"] = 'pcsk_3hUTT4_8LuHsYDLS3KpVEMXW2Qx6T5yUAxbfX5Jow8zrhVTh8iFLJhrRKcMEEDHgf2J92o'
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
+os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+
 
 embeddings = download_hugging_face_embeddings()
 
